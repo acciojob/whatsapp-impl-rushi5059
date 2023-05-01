@@ -27,6 +27,15 @@ public class WhatsappRepository {
         this.messageId = 0;
     }
 
+    public static String saveUser(String name, String mobile) {
+        boolean isUserExists = WhatsappRepository.isNumberExist(mobile);
+        return name;
+    }
+
+    private static boolean isNumberExist(String mobile) {
+        return false;
+    }
+
     public List<User> getUsersByGroup(Group group) {
         if (groupUserMap.containsKey(group)) {
             return groupUserMap.get(group);
