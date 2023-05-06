@@ -24,19 +24,4 @@ public class User {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        return mobile != null ? mobile.equals(user.mobile) : user.mobile == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return mobile != null ? mobile.hashCode() : 0;
-    }
 }

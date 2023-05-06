@@ -5,48 +5,34 @@ import java.util.Date;
 public class Message {
     private int id;
     private String content;
-    private User sender;
-    private Group group;
     private Date timestamp;
 
-    public Message(int messageId, String messageContent, User sender, Group group) {
-        this.id = messageId;
-        this.content = messageContent;
-        this.sender = sender;
-        this.group = group;
+    public Message(int id, String content, Date timestamp) {
+        this.id = id;
+        this.content = content;
+        this.timestamp = timestamp;
+    }
+
+    public Message(int id, String content) {
+        this.id = id;
+        this.content = content;
         this.timestamp = new Date();
     }
 
-    public int getMessageId() {
+    public int getId() {
         return id;
     }
 
-    public void setMessageId(int messageId) {
-        this.id = messageId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getMessageContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setMessageContent(String messageContent) {
-        this.content = messageContent;
-    }
-
-    public User getSender() {
-        return sender;
-    }
-
-    public void setSender(User sender) {
-        this.sender = sender;
-    }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public Date getTimestamp() {
